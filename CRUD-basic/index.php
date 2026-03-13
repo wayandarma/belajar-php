@@ -125,6 +125,7 @@ require __DIR__ . '/partials/header.php';
                                         <div class="d-flex justify-content-end gap-2">
                                             <a href="edit.php?id=<?= (int) $student['id'] ?>" class="btn btn-outline-primary btn-sm">Edit</a>
                                             <form action="delete.php" method="post" onsubmit="return confirm('Hapus data ini?');">
+                                                <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
                                                 <input type="hidden" name="id" value="<?= (int) $student['id'] ?>">
                                                 <button type="submit" class="btn btn-outline-danger btn-sm">Hapus</button>
                                             </form>

@@ -23,6 +23,8 @@ $submitHelper = $submitHelper ?? 'Data akan langsung tersimpan ke SQLite lokal.'
             <span class="badge text-bg-light border px-3 py-2">Native PHP</span>
         </div>
 
+        <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
+
         <div class="row g-4">
             <div class="col-md-6">
                 <label for="name" class="form-label">Nama lengkap</label>

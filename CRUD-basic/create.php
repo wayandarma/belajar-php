@@ -15,6 +15,11 @@ $student = [
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!verify_csrf_token($_POST['csrf_token'] ?? '')) {
+        flash('danger', 'Token CSRF tidak valid. Silakan coba lagi.');
+        redirect('create.php');
+    }
+
     $student = normalize_student_input($_POST);
     $errors = validate_student($student);
 

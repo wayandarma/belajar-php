@@ -9,6 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect('index.php');
 }
 
+if (!verify_csrf_token($_POST['csrf_token'] ?? '')) {
+    flash('danger', 'Token CSRF tidak valid. Silakan coba lagi.');
+    redirect('index.php');
+}
+
 $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
 
 if (!$id) {
