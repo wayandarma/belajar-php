@@ -1,7 +1,4 @@
-p<?php
-
-declare(strict_types=1);
-
+<?php
 $title = $title ?? 'Belajar PHP CRUD';
 $activePage = $activePage ?? '';
 ?>
