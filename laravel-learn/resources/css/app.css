@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -6,6 +7,57 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+    --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --color-primary: #2563eb;
+    --color-primary-soft: rgba(37, 99, 235, 0.14);
+    --color-accent: #f97316;
+    --color-ink: #0f172a;
+    --color-text: #1e293b;
+    --color-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-surface: rgba(255, 255, 255, 0.84);
+    --color-surface-strong: rgba(255, 255, 255, 0.94);
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 28%),
+        radial-gradient(circle at right 16%, rgba(249, 115, 22, 0.12), transparent 24%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.surface-panel {
+    background: var(--color-surface);
+    backdrop-filter: blur(18px);
+}
+
+.surface-panel-strong {
+    background: var(--color-surface-strong);
+    backdrop-filter: blur(18px);
+}
+
+.dashboard-ring {
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.5) inset,
+        0 24px 60px -32px rgba(15, 23, 42, 0.35);
+}
+
+.metric-gradient {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(249, 115, 22, 0.1));
+}
+
+::selection {
+    color: white;
+    background: rgba(37, 99, 235, 0.88);
 }

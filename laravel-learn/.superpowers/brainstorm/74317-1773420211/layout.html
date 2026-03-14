@@ -1,0 +1,84 @@
+<h2>Student Dashboard — Layout Direction</h2>
+<p class="subtitle">Which layout feels right for a student management system?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="sidebar" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px; background: #f8fafc;">
+      <div style="display:flex; gap: 8px; height: 160px;">
+        <div style="width: 60px; background: #1e293b; border-radius: 6px; padding: 10px 6px; display:flex; flex-direction:column; gap:6px;">
+          <div style="background:#3b82f6; height:8px; border-radius:3px;"></div>
+          <div style="background:#475569; height:8px; border-radius:3px;"></div>
+          <div style="background:#475569; height:8px; border-radius:3px;"></div>
+          <div style="background:#475569; height:8px; border-radius:3px;"></div>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+          <div style="background:#e2e8f0; height:30px; border-radius:4px;"></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px;">
+            <div style="background:#3b82f6; height:40px; border-radius:4px;"></div>
+            <div style="background:#10b981; height:40px; border-radius:4px;"></div>
+            <div style="background:#f59e0b; height:40px; border-radius:4px;"></div>
+          </div>
+          <div style="background:#e2e8f0; flex:1; border-radius:4px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Sidebar + Content</h3>
+      <p>Fixed sidebar navigation on the left, main content on the right. Clean, professional admin feel. Best for navigating between multiple sections.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="topnav" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px; background: #f8fafc;">
+      <div style="display:flex; flex-direction:column; gap: 8px; height: 160px;">
+        <div style="background: #1e293b; height: 32px; border-radius: 6px; display:flex; align-items:center; padding: 0 10px; gap:8px;">
+          <div style="background:#3b82f6; height:8px; width:30px; border-radius:3px;"></div>
+          <div style="background:#475569; height:8px; width:25px; border-radius:3px;"></div>
+          <div style="background:#3b82f6; height:8px; width:25px; border-radius:3px; margin-left:auto;"></div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
+          <div style="background:#3b82f6; height:45px; border-radius:4px;"></div>
+          <div style="background:#10b981; height:45px; border-radius:4px;"></div>
+          <div style="background:#f59e0b; height:45px; border-radius:4px;"></div>
+        </div>
+        <div style="background:#e2e8f0; flex:1; border-radius:4px;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Top Navbar + Full Width</h3>
+      <p>Navigation bar at the top, full-width content below. More spacious feel. Good for single-section apps like a student list dashboard.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="hybrid" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px; background: #f8fafc;">
+      <div style="display:flex; flex-direction:column; gap: 8px; height: 160px;">
+        <div style="background: #1e293b; height: 32px; border-radius: 6px; display:flex; align-items:center; padding: 0 10px; gap:8px;">
+          <div style="background:white; height:8px; width:30px; border-radius:3px; opacity:0.9;"></div>
+          <div style="background:#475569; height:8px; width:60px; border-radius:3px;"></div>
+          <div style="background:#3b82f6; height:18px; width:50px; border-radius:3px; margin-left:auto; display:flex; align-items:center; justify-content:center;"></div>
+        </div>
+        <div style="display:flex; gap:8px; flex:1;">
+          <div style="width:50px; background:#f1f5f9; border-radius:4px; display:flex; flex-direction:column; gap:5px; padding:6px;">
+            <div style="background:#3b82f6; height:6px; border-radius:2px;"></div>
+            <div style="background:#cbd5e1; height:6px; border-radius:2px;"></div>
+            <div style="background:#cbd5e1; height:6px; border-radius:2px;"></div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; gap:6px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; height:40px;">
+              <div style="background:#3b82f6; border-radius:4px;"></div>
+              <div style="background:#10b981; border-radius:4px;"></div>
+            </div>
+            <div style="background:#e2e8f0; flex:1; border-radius:4px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Top Header + Slim Sidebar</h3>
+      <p>Top header with branding, slim icon sidebar on left, dashboard content. The most modern admin app pattern — used by tools like Vercel, Supabase.</p>
+    </div>
+  </div>
+
+</div>
